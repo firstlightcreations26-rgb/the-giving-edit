@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>The Giving Edit | Your Money. Your Values. Your Impact.</title>
+  <meta name="description" content="Discover your personal giving profile and create a charitable giving plan based on what matters most to you.">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="nav">
+    <a class="brand" href="#">THE GIVING EDIT</a>
+    <a class="nav-link" href="#how">How it works</a>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="eyebrow">PERSONALIZED PHILANTHROPY</div>
+      <h1>Your money.<br><em>Your values.</em><br>Your impact.</h1>
+      <p class="hero-copy">You shouldn't have to spend hours researching charities to know where your giving belongs. Tell us what matters to you, and we'll turn your values into a personalized giving plan.</p>
+      <button class="primary" onclick="startQuiz()">Build My Giving Plan <span>→</span></button>
+      <p class="micro">Free • About 3 minutes • No donation commitment</p>
+    </section>
+
+    <section id="how" class="how">
+      <div class="section-label">THE IDEA</div>
+      <h2>Philanthropy should feel personal.</h2>
+      <div class="cards">
+        <article><div class="number">01</div><h3>Tell us what matters.</h3><p>Your causes, values, priorities, and the kind of change you want to create.</p></article>
+        <article><div class="number">02</div><h3>Discover your giving profile.</h3><p>We'll translate your answers into a giving personality and suggested priorities.</p></article>
+        <article><div class="number">03</div><h3>Build your portfolio.</h3><p>See how your giving could be divided across causes and organizations that fit your goals.</p></article>
+      </div>
+    </section>
+
+    <section id="quiz" class="quiz-section hidden">
+      <div class="quiz-shell">
+        <div class="progress"><div id="progressBar"></div></div>
+        <div class="quiz-count" id="quizCount"></div>
+        <div id="quizContent"></div>
+      </div>
+    </section>
+
+    <section id="results" class="results hidden">
+      <div class="results-shell">
+        <div class="eyebrow">YOUR GIVING PROFILE</div>
+        <h2 id="profileName"></h2>
+        <p id="profileIntro" class="profile-intro"></p>
+
+        <div class="allocation-wrap">
+          <div>
+            <div class="section-label">YOUR PRIORITIES</div>
+            <div id="priorityList"></div>
+          </div>
+          <div class="portfolio-card">
+            <div class="section-label">EXAMPLE PORTFOLIO</div>
+            <div id="portfolio"></div>
+            <p class="disclaimer">Illustrative allocation only. This prototype does not independently verify or endorse specific organizations.</p>
+          </div>
+        </div>
+
+        <div class="cta-card">
+          <div>
+            <div class="section-label">GO DEEPER</div>
+            <h3>Want a personalized Giving Plan?</h3>
+            <p>Turn your profile into a researched, customized giving strategy. This is where a paid version of the service could live.</p>
+          </div>
+          <button class="primary" onclick="alert('Stripe checkout can be connected here next.')">Explore the Giving Plan →</button>
+        </div>
+        <button class="text-button" onclick="restartQuiz()">← Retake questionnaire</button>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div>THE GIVING EDIT</div>
+    <p>A concept for personalized charitable giving.</p>
+  </footer>
+
+<script src="script.js"></script>
+</body>
+</html>
